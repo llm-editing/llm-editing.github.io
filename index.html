@@ -9,7 +9,7 @@
 	<meta name="keywords" content="LLM, Large Language Model, LLM, LLM Safety, Knowledge Editing">
 
 	<!-- Begin Jekyll SEO tag v2.8.0 -->
-	<meta property="og:title" content="Editing LLMs" />
+	<meta property="og:title" content="Model Editing" />
 	<meta property="og:locale" content="en_US" />
 	<link rel="canonical" href="https://llm-editing.github.io" />
 	<meta property="og:url" content="https://llm-editing.github.io/" />
@@ -153,7 +153,7 @@
 						<div class="content has-text-justified">
 							<a href="#Behavior-Editing" target="_blank"> (New Preprint) Model Editing as a Double-Edged Sword: Steering Agent Ethical Behavior Toward Beneficence or Harm </a>
 							<br>
-							- We introduce <b><i>Behavior Editing</i></b>, a novel paradigm that frames ethical behavior steering of LLM agents as a model editing task. Using our psychological-moral-theories-grounded benchmark <b>BehaviorBench</b>, we demonstrate that behavior editing can precisely and effectively steer both benevolent and harmful behaviors, underscoring dual-use concerns in model safety and alignment.
+							- We introduce <b><i>Behavior Editing</i></b>, a novel paradigm that frames ethical behavior steering of agents as a model editing task. Using our psychological-moral-theories-grounded benchmark <b>BehaviorBench</b>, we demonstrate that behavior editing can precisely and effectively steer both benevolent and harmful behaviors, underscoring dual-use concerns in model safety and alignment.
 							<br>
 							<a href="#Can-Knowledge-Editing-Really-Correct-Hallucinations"> (ICLR 2025) Can Knowledge Editing Really Correct Hallucinations?</a>
 							<br>
@@ -231,7 +231,7 @@
 						<div class="column has-text-justified">
 							<p class="tldr">
 								<strong>TLDR:</strong> 
-								We introduce <b><i>Behavior Editing</i></b>, a novel paradigm that frames ethical behavior steering of LLM agents as a model editing task. Using our psychological-moral-theories-grounded benchmark <b>BehaviorBench</b>, we demonstrate that behavior editing can precisely and effectively steer both benevolent and harmful behaviors, underscoring dual-use concerns in model safety and alignment.
+								We introduce <b><i>Behavior Editing</i></b>, a novel paradigm that frames ethical behavior steering of agents as a model editing task. Using our psychological-moral-theories-grounded benchmark <b>BehaviorBench</b>, we demonstrate that behavior editing can precisely and effectively steer both benevolent and harmful behaviors, underscoring dual-use concerns in model safety and alignment.
 							</p>
 						</div>
 					</div>
@@ -309,11 +309,12 @@
 							<div id="finding1" class="panel-collapse collapse in">
 								<div class="panel-body">
 									<div class="grey-box" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background: linear-gradient(to right, #f8f9fa, #e9ecef); text-align: left;">
-										<p style="margin: 0; padding: 15px; font-weight: 500; color: #495057;"><span style="color: #ED7845; font-weight: 700;">Finding 1:</span> Behavior Editing is highly effective for steering scenario-specific behavior, especially when employing parameter-modifying techniques such as ROME and FT-M. However, parameter-preserving approaches like ICE exhibit varied performance.</p>
+										<p style="margin: 0; padding: 15px; font-weight: 500; color: #495057;"><span style="color: #ED7845; font-weight: 700;">Finding 1:</span> Behavior Editing is highly effective for steering scenario-specific behavior, especially when employing parameter-modifying techniques such as ROME and FT-M. However, parameter-preserving approaches like In-Context Editing exhibit varied performance.</p>
 									</div>
 									<img src="./static/images/behavior/specific.jpg" alt="efficacy" class="img-responsive">
 									<div class="caption">
-										<p>Comparative analysis of model editing techniques across ethical scenarios using BehaviorBench. Subplots (a-c) illustrate results for malicious editing, while subplots (d-f) represent benevolent editing. Each bar indicates the editing Efficacy (%) for a specific editing method applied across various open-weight LLM agents.</p>
+										<p>Comparative analysis of model editing techniques across ethical scenarios using BehaviorBench. Subplots (a-c) illustrate results for malicious editing, while subplots (d-f) represent benevolent editing. 
+											Each bar indicates the editing Efficacy (%) for a specific editing method applied across various agents based on open-weight LLMs.</p>
 									</div>
 								</div>
 							</div>
@@ -336,7 +337,7 @@
 									</div>
 									<img src="./static/images/behavior/specific-api.jpg" alt="efficacy" class="img-responsive">
 									<div class="caption">
-										<p>Comparison of editing Efficacy (%) for frontier proprietary LLM agents on low-ambiguity MoralChoice open questions. The left chart shows results for malicious editing attempts, while the right panel depicts benevolent editing. The results illustrate substantial variation in robustness among different proprietary models toward ICE.</p>
+										<p>Comparison of editing Efficacy (%) for frontier proprietary LLM agents on low-ambiguity MoralChoice open questions. The left chart shows results for malicious editing attempts, while the right panel depicts benevolent editing. The results illustrate substantial variation in robustness among different proprietary models toward In-Context Editing.</p>
 									</div>
 								</div>
 							</div>
@@ -359,7 +360,7 @@
 									</div>
 									<img src="./static/images/behavior/impact.jpg" alt="efficacy" class="img-responsive">
 									<div class="caption">
-										<p>Impact of Behavior Editing on agents' moral accuracy across various datasets. Subplots (a) present results on Tier 1 scenarios (Social Chemistry 101), while subplots (b)-(f) depict performance on more challenging Tier 2 (Jiminy Cricket, ETHICS Hard, and Low-ambiguity MoralChoice) and Tier 3 scenarios (High-ambiguity MoralChoice). Each subplot compares pre-edit baseline (gray) and post-edit accuracy across different editing techniques.</p>
+										<p>Impact of Behavior Editing on agents' moral accuracy across various datasets. Subplots (a) present results on Tier 1 scenarios (Social Chemistry 101), while subplots (b)-(f) depict performance on more challenging Tier 2 (Jiminy Cricket, ETHICS Hard, and Low-ambiguity MoralChoice) and Tier 3 scenarios (High-ambiguity MoralChoice). Each subplot compares <span style="color: gray;">pre-edit baseline (gray)</span> and post-edit accuracy across different editing techniques.</p>
 									</div>
 									
 								</div>
@@ -379,11 +380,11 @@
 								<div class="panel-body">
 									<div class="grey-box" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background: linear-gradient(to right, #f8f9fa, #e9ecef); text-align: left;">
 										<p style="margin: 0; padding: 15px; font-weight: 500; color: #495057;"><span style="color: #ED7845; font-weight: 700;">
-											Finding 4:</span> Behavior Editing can induce extensive shifts in an agent's overall moral alignment. Parameter-modifying techniques (e.g., ROME, FT-M) exhibit greater efficacy compared to parameter-preserving methods such as ICE. Proprietary models display similar trends, with more recent models showing increased resilience to malicious editing attempts.</p>
+											Finding 4:</span> Behavior Editing can induce extensive shifts in an agent's global moral alignment. Parameter-modifying techniques (e.g., ROME, FT-M) exhibit greater efficacy compared to parameter-preserving methods such as ICE. Proprietary models display similar trends, with more recent models showing increased resilience to malicious behavior editing.</p>
 									</div>
 									<img src="./static/images/behavior/impact.jpg" alt="efficacy" class="img-responsive">
 									<div class="caption">
-										<p>Impact of Behavior Editing on agents' moral accuracy across various datasets. Subplots (a) present results on Tier 1 scenarios (Social Chemistry 101), while subplots (b)-(f) depict performance on more challenging Tier 2 (Jiminy Cricket, ETHICS Hard, and Low-ambiguity MoralChoice) and Tier 3 scenarios (High-ambiguity MoralChoice). Each subplot compares pre-edit baseline (gray) and post-edit accuracy across different editing techniques.</p>
+										<p>Impact of Behavior Editing on agents' moral accuracy across various datasets. Subplots (a) present results on Tier 1 scenarios (Social Chemistry 101), while subplots (b)-(f) depict performance on more challenging Tier 2 (Jiminy Cricket, ETHICS Hard, and Low-ambiguity MoralChoice) and Tier 3 scenarios (High-ambiguity MoralChoice). Each subplot compares <span style="color: gray;">pre-edit baseline (gray)</span> and post-edit accuracy across different editing techniques.</p>
 									</div>
 									<img src="./static/images/behavior/impact-api.jpg" alt="efficacy" class="img-responsive">
 									<div class="caption">
@@ -410,7 +411,7 @@
 									</div>
 									<img src="./static/images/behavior/ethics_radar.jpg" alt="efficacy" class="img-responsive">
 									<div class="caption">
-										<p>Editing performance across five Normative Ethics dimensions (Justice, Morality, Morality-hard, Deontology, and Virtue) for LLaMA-2-7B and LLaMA-3-8B. Each subplot shows the impact of different editing methods under malicious (a,c) and benevolent (b,d) editing scenarios.</p>
+										<p>Editing performance across five Normative Ethics dimensions (Justice, Morality, Morality-hard, Deontology, and Virtue) for LLaMA-2-7B and LLaMA-3-8B. Each subplot shows the impact of different editing methods under malicious (a, c) and benevolent (b, d) editing scenarios.</p>
 									</div>
 								</div>
 							</div>
@@ -425,10 +426,10 @@
 			<div class="container is-max-desktop content">
 			<h2 class="title">BibTeX</h2>
 <pre><code>@article{huang2025behavior,
-  title     = {Behavior Editing as a Double-Edged Sword: Steering Agent Ethical Behavior Toward Beneficence or Harm},
-  author    = {Baixiang Huang and Zhen Tan and Haoran Wang and Zijie Liu and Dawei Li and Ali Payani and Huan Liu and Tianlong Chen and Kai Shu},
-  year      = {2025},
-  url       = {https://arxiv.org/abs/2506.20606}
+  title   = {Behavior Editing as a Double-Edged Sword: Steering Agent Ethical Behavior Toward Beneficence or Harm},
+  author  = {Baixiang Huang and Zhen Tan and Haoran Wang and Zijie Liu and Dawei Li and Ali Payani and Huan Liu and Tianlong Chen and Kai Shu},
+  year    = {2025},
+  url     = {https://arxiv.org/abs/2506.20606}
   journal = {arXiv preprint arXiv: 2506.20606}
 }</code></pre>
 			</div>
@@ -1080,43 +1081,6 @@
 	<!-- Main -->
 	<script src="style/js/main.js"></script>
 
-
-	<!-- Default Statcounter code for llm-editing
-https://llm-editing.github.io -->
-<script type="text/javascript">
-	var sc_project=13097924; 
-	var sc_invisible=1; 
-	var sc_security="67cefcfd"; 
-	</script>
-	<script type="text/javascript"
-	src="https://www.statcounter.com/counter/counter.js"
-	async></script>
-	<noscript><div class="statcounter"><a title="Web Analytics
-	Made Easy - Statcounter" href="https://statcounter.com/"
-	target="_blank"><img class="statcounter"
-	src="https://c.statcounter.com/13097924/0/67cefcfd/1/"
-	alt="Web Analytics Made Easy - Statcounter"
-	referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-	<!-- End of Statcounter Code -->
-
-	<!-- Default Statcounter code for llm-editing
-	https://llm-editing.github.io/ -->
-	<script type="text/javascript">
-		var sc_project=13021589; 
-		var sc_invisible=1; 
-		var sc_security="137f28b6"; 
-	</script>
-	<script type="text/javascript"
-	src="https://www.statcounter.com/counter/counter.js"
-	async></script>
-	<noscript><div class="statcounter"><a title="Web Analytics"
-	href="https://statcounter.com/" target="_blank"><img
-	class="statcounter"
-	src="https://c.statcounter.com/13021589/0/137f28b6/1/"
-	alt="Web Analytics"
-	referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-	<!-- End of Statcounter Code -->
-
 	<!-- Smooth Scrolling Script -->
 	<script>
 		$(document).ready(function() {
@@ -1213,6 +1177,24 @@ https://llm-editing.github.io -->
 			});
 		});
 	</script>
+
+<!-- Default Statcounter code for llm-editing
+https://llm-editing.github.io -->
+<script type="text/javascript">
+var sc_project=13097924; 
+var sc_invisible=1; 
+var sc_security="67cefcfd"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics
+Made Easy - Statcounter" href="https://statcounter.com/"
+target="_blank"><img class="statcounter"
+src="https://c.statcounter.com/13097924/0/67cefcfd/1/"
+alt="Web Analytics Made Easy - Statcounter"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
 
 </body>
 </html>
